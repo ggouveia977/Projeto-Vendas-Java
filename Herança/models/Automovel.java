@@ -1,13 +1,22 @@
 package models;
 
+import java.util.Date;
+
 public class Automovel {
+
+    public Automovel(String placa){
+        setPlaca(placa);
+        setCriadoEm(new Date());
+        System.out.println("Criamos um automóvel");
+    }
     
     private String placa;
     private String cor;
     private int velocidadeMaxima;
     private String modelo;
     private String marca;
-    
+    private Date criadoEm;
+
     public String getPlaca() {
         return placa;
     }
@@ -38,5 +47,14 @@ public class Automovel {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-    
+    public Date getCriadoEm() {
+        return criadoEm;
+    }
+    public void setCriadoEm(Date criadoEm) {
+        this.criadoEm = criadoEm;
+    }
+
+    public String paraTexto(){
+        return "Isso é um automóvel";
+    }
 }
